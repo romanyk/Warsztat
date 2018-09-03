@@ -2,10 +2,6 @@
     box-sizing: border-box;
 }
 
-body {
-    font-family: raleway, Tahoma, Arial;
-}
-
 @font-face {
     font-family: 'raleway';
     src: url(../fonts/raleway-regular-webfont.woff2) format('woff2'), url(../fonts/raleway-regular-webfont.woff) format('woff');
@@ -27,10 +23,33 @@ body {
     font-style: normal;
 }
 
+body {
+    font-family: 'raleway', Tahoma, Arial, Helvetica, sans-serif;
+    line-height: 150%;
+}
+
 .container {
     max-width: 1024px;
     margin: 0 auto;
 }
+
+h2 {
+    font-size: 22px;
+    text-transform: uppercase;
+    padding-bottom: 20px;
+}
+
+h2:after {
+    content: '';
+    display: block;
+    width: 320px;
+    height: 8px;
+    margin-top: 5px;
+    margin-bottom: 75px;
+    margin-left: -2px;
+    background: #24ba9f;
+}
+
 
 header {
     background-color: #000;
@@ -73,7 +92,7 @@ section.slider {
     background: -o-linear-gradient(top, rgba(249, 249, 249, 1) 0%, rgba(207, 207, 215, 1) 100%);
     background: -ms-linear-gradient(top, rgba(249, 249, 249, 1) 0%, rgba(207, 207, 215, 1) 100%);
     background: linear-gradient(to bottom, rgba(249, 249, 249, 1) 0%, rgba(207, 207, 215, 1) 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f9f9f9', endColorstr='#cfcfd7', GradientType=0);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#f9f9f9', endColorstr='#cfcfd7', GradientType=0);
 }
 
 section.slider .container {
@@ -88,15 +107,17 @@ section.slider .container {
     padding: 0 20px;
 }
 
-section.slider button {
+button.navigator {
     display: inline-block;
     background-color: transparent;
+    border: none;
+    text-decoration: none;
     color: #24ba9f;
     border: none;
     font-size: 80px;
 }
 
-section.slider .info button {
+.info button {
     display: inline-block;
     background-color: #24ba9f;
     color: #fff;
@@ -113,16 +134,20 @@ section.slider .info {
 
 section.slider .info h1 {
     font-size: 2rem;
+    color: #000;
+    line-height: 1;
     text-transform: uppercase;
 }
 
 section.slider .info h1 span {
     color: #24ba9f;
+    font-weight: bold;
 }
 
 section.slider .info p {
+    color: #000;
     padding: 40px 0;
-    line-height: 150%;
+    text-align: center;
 }
 
 section.news {
@@ -130,12 +155,245 @@ section.news {
     padding: 30px 0 50px 0;
 }
 
-.news .container ul {
+section.news ul {
     display: flex;
     justify-content: space-between;
 }
 
-.box__items h3 {
-    display: inline-block;
-    border-bottom: 4px solid #24ba9f;
+section.news ul li {
+    position: relative;
+    padding: 0 30px 0 0;
+}
+
+section.news ul li:last-child {
+    position: relative;
+    padding-right: 0;
+}
+
+section .news h3 {
+    color: #000;
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.box__news {
+    position: relative;
+}
+
+.box__news h3 {
+    position: absolute;
+    bottom: 16px;
+    padding: 10px 20px 20px 16px;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.7);
+}
+
+.box__news h3:after {
+    content: "";
+    display: block;
+    width: 140px;
+    height: 5px;
+    background: #24ba9f;
+    margin-left: -2px;
+}
+
+.box__news img {
+    display: block;
+}
+
+.box__item {
+    position: absolute;
+    display: none;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 20px 10px;
+    background: #fff;
+    border: 1px solid #ccc;
+}
+
+.box__item p {
+    color: grey;
+    font-size: 14px;
+    margin: 20px 0;
+}
+
+section.news .container ul li:hover .box__item {
+    display: block;
+}
+
+.price_wrapper {
+    background: #f1f1f1;
+}
+
+.price_wrapper .container {
+    padding: 50px 0;
+}
+
+ul.prices {
+    display: flex;
+    justify-content: space-between;
+}
+
+ul.prices>li {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    flex: 1;
+    position: relative;
+    height: 500px;
+    margin-right: 30px;
+    padding: 30px 0;
+    background: #f9f9f9;
+    text-align: center;
+    border: 2px solid #c2c2c2;
+    transition: 0.4s;
+}
+
+
+ul.prices>li:last-child {
+    margin-right: 0;
+}
+
+ul.prices>li:before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: -25px;
+    left: 145px;
+    height: 25px;
+    width: 25px;
+    z-index: 2;
+    background: #c2c2c2;
+    border-radius: 50%;
+}
+
+ul.prices>li:after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: -40px;
+    left: 130px;
+    height: 55px;
+    width: 55px;
+    z-index: 1;
+    background: #fff;
+    border: 2px solid #c2c2c2;
+    border-radius: 50%;
+}
+
+
+ul.prices h3 {
+    font-size: 22px;
+    color: #24ba9f;
+    text-transform: uppercase;
+    margin-bottom: 35px;
+}
+
+
+
+.price {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 130px;
+    width: 130px;
+    margin: 0 auto;
+    background: #fff;
+    border: 2px solid #c2c2c2;
+    border-radius: 50%;
+}
+
+.price p {
+    font-size: 16px;
+    color: #c2c2c2;
+    font-weight: bold;
+    text-transform: uppercase;
+    line-height: 1;
+}
+
+.price p.number {
+    margin-bottom: 10px;
+    font-size: 40px;
+    font-weight: bold;
+}
+
+.price p.number sup {
+    font-size: 14px;
+    font-weight: bold;
+    top: -20px;
+}
+
+ul.price_item {
+    border-top: 2px solid #fff;
+    border-bottom: 2px solid #fff;
+    margin-top: 35px;
+}
+
+
+ul.price_item li {
+    font-size: 24px;
+    padding: 10px 0;
+}
+
+ul.price_item li:nth-of-type(2n+1) {
+    background: #e4e4e4;
+}
+
+ul.price_item li:nth-of-type(2n+2) {
+    background: #f1f1f1;
+}
+
+ul.prices button {
+    margin: auto 100px 0;
+    padding: 8px 30px;
+    background: #24ba9f;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+ul.prices>li:hover {
+    background: #24ba9f;
+    border: 2px solid #24ba9f;
+    transition: 0.4s;
+}
+
+ul.prices>li:hover:before {
+    background: #fff;
+}
+
+ul.prices>li:hover:after {
+    background: #24ba9f;
+    border: 2px solid #24ba9f;
+}
+
+ul.prices>li:hover h3 {
+    color: #fff;
+}
+
+ul.prices>li:hover .price {
+    border: 2px solid #fff;
+}
+
+ul.prices>li:hover .price p {
+    color: #24ba9f;
+}
+
+ul.prices>li:hover ul.price_item {
+    border-top: 2px solid #24ba9f;
+    border-bottom: 2px solid #24ba9f;
+}
+
+ul.prices>li:hover ul.price_item li:nth-of-type(2n+1) {
+    background: #fff;
+}
+
+ul.prices>li:hover button {
+    background: #fff;
+    color: #24ba9f;
 }
