@@ -31,6 +31,7 @@ body {
 .container {
     max-width: 1024px;
     margin: 0 auto;
+    padding: 30px 0;
 }
 
 h2 {
@@ -49,7 +50,6 @@ h2:after {
     margin-left: -2px;
     background: #24ba9f;
 }
-
 
 header {
     background-color: #000;
@@ -228,9 +228,6 @@ section.news .container ul li:hover .box__item {
     background: #f1f1f1;
 }
 
-.price_wrapper .container {
-    padding: 50px 0;
-}
 
 ul.prices {
     display: flex;
@@ -251,7 +248,6 @@ ul.prices>li {
     border: 2px solid #c2c2c2;
     transition: 0.4s;
 }
-
 
 ul.prices>li:last-child {
     margin-right: 0;
@@ -284,15 +280,12 @@ ul.prices>li:after {
     border-radius: 50%;
 }
 
-
 ul.prices h3 {
     font-size: 22px;
     color: #24ba9f;
     text-transform: uppercase;
     margin-bottom: 35px;
 }
-
-
 
 .price {
     display: flex;
@@ -331,7 +324,6 @@ ul.price_item {
     border-bottom: 2px solid #fff;
     margin-top: 35px;
 }
-
 
 ul.price_item li {
     font-size: 24px;
@@ -397,3 +389,166 @@ ul.prices>li:hover button {
     background: #fff;
     color: #24ba9f;
 }
+
+
+.complete {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+form {
+    flex: 2;
+    margin-right: 50px;
+}
+
+.send {
+    flex: 1;
+}
+
+.form_item {
+    display: block;
+    width: 100%;
+    padding: 20px 10px 10px 10px;
+    margin-bottom: 30px;
+    border: 1px solid rgba(36, 186, 159, 0.45);
+    font-size: 15px;
+    color: #cdcdcd;
+}
+
+.form_item:last-child {
+    margin-bottom: 0;
+}
+
+::-webkit-input-placeholder {
+    color: #cdcdcd;
+    font-family: 'raleway', Tahoma, Arial, sans-serif;
+    font-weight: 300;
+    font-size: 35px;
+}
+
+:-moz-placeholder {
+    /* Firefox 18- */
+    color: #cdcdcd;
+    font-family: 'raleway', Tahoma, Arial, sans-serif;
+    font-weight: 300;
+    font-size: 35px;
+}
+
+::-moz-placeholder {
+    /* Firefox 19+ */
+    color: #cdcdcd;
+    font-family: 'raleway', Tahoma, Arial, sans-serif;
+    font-weight: 300;
+    font-size: 35px;
+}
+
+:-ms-input-placeholder {
+    color: #cdcdcd;
+    font-family: 'raleway', Tahoma, Arial, sans-serif;
+    font-weight: 300;
+    font-size: 35px;
+}
+
+.send img {
+    display: block;
+    margin-bottom: 30px;
+}
+
+
+.checkbox {
+    float: left;
+    position: relative;
+    margin: 20px;
+}
+
+.checkbox:after {
+    content: "";
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    top: -25px;
+    left: -25px;
+    background: #fff;
+    border-radius: 2px;
+    border: 1px solid #24ba9f;
+    cursor: pointer;
+    clear: both;
+}
+
+.checkbox:checked:after {
+    background-image: url(../images/form_ok.jpg);
+    background-color: #fff;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;
+}
+
+.send label {
+    font-size: 18px;
+    color: #cdcdcd;
+}
+
+.send .button {
+    color: #fff;
+    background: #24ba9f;
+    padding: 15px 30px;
+    width: 100%;
+    border: none;
+    border-radius: 10px;
+    font-size: 30px;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-top: 20px;
+}
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 50px 0;
+}
+
+.copyright {
+    flex: 2;
+}
+
+.media {
+    display: flex;
+    flex: 1;
+    justify-content: space-between;
+    align-items: center;
+}
+
+	.media ul {
+	    display: flex;
+	    flex: 1;
+	    justify-content: left;
+	}
+
+	.media ul li {
+	    margin-right: 5px;
+	}
+
+	.media ul li:last-child {
+	    margin-right: 0;
+	}
+
+	.media ul li:first-child {
+	    margin-left: 15px;
+	}
+
+	.media ul li img {
+	    width: 32px;
+	    height: auto;
+	}
+
+	h4 {
+        flex: 1;
+        color: #cdcdcd;
+	    text-align: right;
+	    text-transform: uppercase;
+	}
+
+	h4 span {
+	    font-weight: bold;
+	}
