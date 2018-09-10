@@ -53,7 +53,6 @@ h2:after {
 
 header {
     background-color: #000;
-    padding: 10px 0;
 }
 
 header .container {
@@ -68,20 +67,75 @@ header .container span {
     color: #24ba9f;
 }
 
-header .container nav ul {
+nav {
     display: flex;
     justify-content: space-between;
 }
 
-header .container nav ul li a {
-    padding: 0 30px;
-    text-decoration: none;
-    text-transform: uppercase;
-    color: #fff;
+ul.menu {
+    text-align: right;
 }
 
-header .container nav ul li a:last-child {
+li.menu_element {
+    position: relative;
+    display: inline-block;
+    padding: 0 10px;
+}
+
+li.menu_element:last-child {
     padding-right: 0;
+}
+
+li.menu_element>a {
+    color: #fff;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: 0.5px;
+}
+
+ul.dropdown {
+    position: absolute;
+    top: 260%;
+    height: 0;
+    width: 120px;
+    margin-left: -20px;
+    background: black;
+    font-size: 14px;
+    text-transform: none;
+    transition: 0.4s;
+    overflow: hidden;
+}
+
+li.dropdown_element {
+    text-align: left;
+    line-height: 150%;
+    padding: 5px;
+}
+
+li.dropdown_element a {
+    padding: 5px 10px;
+    color: #fff;
+    text-decoration: none;
+}
+
+ul.dropdown:before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: -6px;
+    left: 53px;
+    height: 13px;
+    width: 13px;
+    background: black;
+    transform: rotate(45deg);
+}
+
+li.menu_element:hover>ul.dropdown {
+    height: 100px;
+    transition: 0.4s;
+    overflow: initial;
+    padding-top: 10px;
 }
 
 section.slider {
@@ -227,7 +281,6 @@ section.news .container ul li:hover .box__item {
 .price_wrapper {
     background: #f1f1f1;
 }
-
 
 ul.prices {
     display: flex;
@@ -390,7 +443,6 @@ ul.prices>li:hover button {
     color: #24ba9f;
 }
 
-
 .complete {
     display: flex;
     justify-content: space-between;
@@ -455,7 +507,6 @@ form {
     margin-bottom: 30px;
 }
 
-
 .checkbox {
     float: left;
     position: relative;
@@ -510,6 +561,7 @@ footer {
 
 .copyright {
     flex: 2;
+    color: #cdcdcd;
 }
 
 .media {
@@ -519,36 +571,36 @@ footer {
     align-items: center;
 }
 
-	.media ul {
-	    display: flex;
-	    flex: 1;
-	    justify-content: left;
-	}
+.media ul {
+    display: flex;
+    flex: 1;
+    justify-content: left;
+}
 
-	.media ul li {
-	    margin-right: 5px;
-	}
+.media ul li {
+    margin-right: 5px;
+}
 
-	.media ul li:last-child {
-	    margin-right: 0;
-	}
+.media ul li:last-child {
+    margin-right: 0;
+}
 
-	.media ul li:first-child {
-	    margin-left: 15px;
-	}
+.media ul li:first-child {
+    margin-left: 15px;
+}
 
-	.media ul li img {
-	    width: 32px;
-	    height: auto;
-	}
+.media ul li img {
+    width: 32px;
+    height: auto;
+}
 
-	h4 {
-        flex: 1;
-        color: #cdcdcd;
-	    text-align: right;
-	    text-transform: uppercase;
-	}
+h4 {
+    flex: 1;
+    color: #cdcdcd;
+    text-align: right;
+    text-transform: uppercase;
+}
 
-	h4 span {
-	    font-weight: bold;
-	}
+h4 span {
+    font-weight: bold;
+}
