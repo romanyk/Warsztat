@@ -37,15 +37,13 @@ body {
 }
 
 .container {
-    max-width: 1024px;
+    max-width: 1054px;
     margin: 0 auto;
-    padding: 30px 0;
 }
 
 h2 {
     font-size: 22px;
     text-transform: uppercase;
-    padding-bottom: 20px;
 }
 
 h2:after {
@@ -69,6 +67,7 @@ header .container {
     color: #fff;
     align-items: center;
     text-transform: uppercase;
+    padding: 10px 0;
 }
 
 header .container span {
@@ -104,7 +103,7 @@ li.menu_element>a {
 
 ul.dropdown {
     position: absolute;
-    top: 260%;
+    top: 180%;
     height: 0;
     width: 120px;
     margin-left: -20px;
@@ -160,13 +159,17 @@ section.slider {
 section.slider .container {
     display: flex;
     justify-content: space-between;
-    padding: 50px 0;
+    padding: 90px 0 40px;
 }
 
 .box__chair {
     display: flex;
-    justify-content: space-between;
-    padding: 0 20px;
+    align-items: center;
+}
+
+.chair img {
+    width: 350px;
+    margin-right: 50px;
 }
 
 button.navigator {
@@ -187,15 +190,16 @@ button.navigator {
     border: none;
     border-radius: 5px;
     text-transform: uppercase;
-    font-size: 20px;
+    font-size: 25px;
 }
 
 section.slider .info {
     text-align: center;
+    width: 440px;
 }
 
 section.slider .info h1 {
-    font-size: 2rem;
+    font-size: 2.5rem;
     color: #000;
     line-height: 1;
     text-transform: uppercase;
@@ -215,6 +219,7 @@ section.slider .info p {
 section.news {
     background-color: #fff;
     padding: 30px 0 50px 0;
+    margin-bottom: 45px;
 }
 
 section.news ul {
@@ -298,12 +303,13 @@ section.news .container ul li:hover .box__item {
 
 .price_wrapper {
     background: #f1f1f1;
+    padding: 45px 0 65px;
 }
 
 ul.prices {
     display: flex;
     justify-content: space-between;
-    margin-top: 20px;
+    padding-top: 40px;
 }
 
 ul.prices>li {
@@ -356,7 +362,7 @@ ul.prices h3 {
     font-size: 22px;
     color: #24ba9f;
     text-transform: uppercase;
-    margin-bottom: 35px;
+    margin-bottom: 25px;
 }
 
 .price {
@@ -463,6 +469,11 @@ ul.prices>li:hover button {
     color: #24ba9f;
 }
 
+
+.contact {
+    margin: 30px 0;
+}
+
 .complete {
     display: flex;
     justify-content: space-between;
@@ -471,7 +482,7 @@ ul.prices>li:hover button {
 
 form {
     flex: 2;
-    margin-right: 50px;
+    margin-right: 100px;
 }
 
 .send {
@@ -577,7 +588,9 @@ form {
 footer {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     padding: 50px 0;
+
 }
 
 .copyright {
@@ -619,7 +632,9 @@ h4 {
     flex: 1;
     color: #cdcdcd;
     text-align: right;
+    font-size: 20px;
     text-transform: uppercase;
+    letter-spacing: 0.5px;
 }
 
 h4 span {
