@@ -54,7 +54,7 @@ h2:after {
     width: 320px;
     height: 8px;
     margin-top: 5px;
-    margin-bottom: 75px;
+    margin-bottom: 40px;
     margin-left: -2px;
     background: #24ba9f;
 }
@@ -303,6 +303,7 @@ section.news .container ul li:hover .box__item {
 ul.prices {
     display: flex;
     justify-content: space-between;
+    margin-top: 20px;
 }
 
 ul.prices>li {
@@ -399,6 +400,7 @@ ul.price_item {
 ul.price_item li {
     font-size: 24px;
     padding: 10px 0;
+    color: #c2c2c2;
 }
 
 ul.price_item li:nth-of-type(2n+1) {
@@ -479,7 +481,7 @@ form {
 .form_item {
     display: block;
     width: 100%;
-    padding: 20px 10px 10px 10px;
+    padding: 30px 10px 15px 10px;
     margin-bottom: 30px;
     border: 1px solid rgba(36, 186, 159, 0.45);
     font-size: 15px;
@@ -488,6 +490,7 @@ form {
 
 .form_item:last-child {
     margin-bottom: 0;
+    padding: 10px;
 }
 
 ::-webkit-input-placeholder {
