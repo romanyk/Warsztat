@@ -2,29 +2,37 @@
     box-sizing: border-box;
 }
 
-@font-face {
-    font-family: 'raleway';
-    src: url(../fonts/raleway-regular-webfont.woff2) format('woff2'), url(../fonts/raleway-regular-webfont.woff) format('woff');
-    font-weight: 400;
-    font-style: normal;
-}
+
 
 @font-face {
     font-family: 'raleway';
-    src: url(../fonts/raleway-bold-webfont.woff2) format('woff2'), url(../fonts/raleway-bold-webfont.woff) format('woff');
+    src: url(../fonts/raleway-bold-webfont.woff2) format('woff2'),
+        url(../fonts/raleway-bold-webfont.woff) format('woff');
     font-weight: 700;
     font-style: normal;
 }
 
+
 @font-face {
     font-family: 'raleway';
-    src: url(../fonts/raleway-light-webfont.woff2) format('woff2'), url(../fonts/raleway-light-webfont.woff) format('woff');
+    src: url(../fonts/raleway-light-webfont.woff2) format('woff2'),
+        url(../fonts/raleway-light-webfont.woff) format('woff');
     font-weight: 300;
     font-style: normal;
 }
 
+
+@font-face {
+    font-family: 'raleway';
+    src: url(../fonts/raleway-regular-webfont.woff2) format('woff2'),
+        url(../fonts/raleway-regular-webfont.woff) format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
 body {
-    font-family: 'raleway', Tahoma, Arial, Helvetica, sans-serif;
+    font-family: 'raleway', Tahoma, Arial, sans-serif;
     line-height: 150%;
 }
 
@@ -133,7 +141,7 @@ ul.dropdown:before {
 
 li.menu_element:hover>ul.dropdown {
     height: 100px;
-    transition: 0.4s;
+    transition: opacity 0.4s ease-in-out;
     overflow: initial;
     padding-top: 10px;
 }
@@ -216,7 +224,6 @@ section.news ul {
 
 section.news ul li {
     position: relative;
-    padding: 0 30px 0 0;
 }
 
 section.news ul li:last-child {
@@ -251,6 +258,17 @@ section .news h3 {
     background: #24ba9f;
     margin-left: -2px;
 }
+
+
+.box__item h3:after {
+    content: "";
+    display: block;
+    width: 140px;
+    height: 5px;
+    background: #24ba9f;
+    margin-left: -2px;
+}
+
 
 .box__news img {
     display: block;
