@@ -180,6 +180,7 @@ button.navigator {
     color: #24ba9f;
     border: none;
     font-size: 80px;
+    outline: none;
 }
 
 .info button {
